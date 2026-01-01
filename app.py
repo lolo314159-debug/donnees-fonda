@@ -3,13 +3,38 @@ import pandas as pd
 
 st.set_page_config(page_title="Stoxx 600 Picker", layout="wide")
 
-st.title("🇪🇺 STOXX 600 Dashboard (Mode Fichier)")
+st.title("🇪🇺 STOXX 600 Dashboard")
 
-# Fonction pour charger les données sans risque de blocage
+# --- MÉMO DES COLONNES ---
+with st.expander("ℹ️ Mémo : Signification des indicateurs (Stock Picking)"):
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("""
+        **1. PER (Price Earnings Ratio)**
+        * *Définition :* Rapport entre le cours de bourse et le bénéfice par action.
+        * *Interprétation :* Indique combien de fois l'investisseur paie le bénéfice. 
+        * *Seuils :* Un PER < 15 est souvent jugé bon marché (Value), > 25 est jugé cher ou "Croissance".
+        
+        **2. ROE % (Return on Equity)**
+        * *Définition :* Rentabilité des capitaux propres.
+        * *Interprétation :* Capacité de l'entreprise à générer du profit avec l'argent des actionnaires.
+        * *Cible :* On cherche idéalement un ROE > 15%.
+        """)
+    with col2:
+        st.markdown("""
+        **3. Yield % (Rendement du Dividende)**
+        * *Définition :* Pourcentage du prix de l'action reversé en dividende.
+        * *Interprétation :* Revenu passif généré par l'action.
+        * *Attention :* Un rendement trop élevé (> 8%) peut parfois signaler un risque de coupure du dividende.
+        
+        **4. Secteur**
+        * Permet de comparer les entreprises à leurs pairs (on ne compare pas le PER d'une banque avec celui d'une boîte de tech).
+        """)
+
+# --- CHARGEMENT DES DONNÉES ---
 @st.cache_data
 def load_data():
     try:
-        # On lit le fichier CSV que vous avez mis sur GitHub
         df = pd.read_csv("stoxx_data.csv")
         return df
     except:
@@ -18,19 +43,18 @@ def load_data():
 df = load_data()
 
 if df.empty:
-    st.error("⚠️ Le fichier 'stoxx_data.csv' est introuvable sur votre GitHub.")
-    st.info("Créez un fichier nommé stoxx_data.csv à côté de votre app.py pour afficher les données.")
+    st.error("⚠️ Fichier 'stoxx_data.csv' manquant.")
 else:
-    # Sidebar pour les filtres
+    # Sidebar
     st.sidebar.header("Filtres")
     secteurs = sorted(df["Secteur"].unique())
-    selected_sector = st.sidebar.multiselect("Secteurs", secteurs, default=secteurs)
+    selected_sector = st.sidebar.multiselect("Filtrer par Secteur", secteurs, default=secteurs)
     
     # Filtrage
     filtered_df = df[df["Secteur"].isin(selected_sector)]
     
-    # Affichage du tableau
-    st.subheader(f"Analyse de {len(filtered_df)} sociétés")
+    # Affichage
+    st.subheader(f"Résultats ({len(filtered_df)} sociétés)")
     st.dataframe(
         filtered_df.style.format({
             "PER": "{:.2f}",
@@ -39,5 +63,5 @@ else:
         }),
         use_container_width=True
     )
-    
-    st.success("Données chargées depuis le fichier local (Pas de risque de blocage Yahoo).")
+
+st.info("💡 Conseil : Pour un bon Stock Picking, cherchez des entreprises avec un ROE élevé et un PER modéré.")
