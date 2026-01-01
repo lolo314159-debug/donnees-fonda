@@ -1,9 +1,57 @@
-Société,Ticker,Secteur,PER,Yield %,ROE %
-ASML Holding,ASML.AS,Technologie,35.2,1.2,28.5
-LVMH,MC.PA,Luxe,22.5,1.8,24.1
-SAP SE,SAP.DE,Technologie,28.1,1.1,18.4
-Nestlé,NESN.SW,Consommation,19.8,3.2,15.2
-Shell,SHEL.L,Energie,8.5,4.1,12.8
-Airbus,AIR.PA,Industrie,21.3,1.5,14.2
-Siemens,SIE.DE,Industrie,14.2,2.9,11.5
-L'Oréal,OR.PA,Luxe,31.4,1.6,19.1
+Société,Ticker,Secteur,Pays,PER,Yield %,ROE %
+ASML Holding,ASML.AS,Technologie,Pays-Bas,34.5,1.15,28.2
+LVMH,MC.PA,Luxe,France,22.8,1.75,24.5
+SAP SE,SAP.DE,Technologie,Allemagne,27.2,1.05,17.8
+Nestlé,NESN.SW,Consommation,Suisse,20.1,3.15,15.4
+Novo Nordisk,NOVO-B.CO,Santé,Danemark,31.2,1.10,32.0
+Shell,SHEL.L,Energie,Royaume-Uni,8.4,4.20,11.5
+AstraZeneca,AZN.L,Santé,Royaume-Uni,18.5,2.10,16.2
+Roche Holding,ROG.SW,Santé,Suisse,15.8,3.80,22.4
+HSBC Holdings,HSBA.L,Finance,Royaume-Uni,6.8,5.50,12.1
+TotalEnergies,TTE.PA,Energie,France,7.5,4.80,14.5
+Siemens,SIE.DE,Industrie,Allemagne,14.8,2.85,13.2
+Sanofi,SAN.PA,Santé,France,12.5,3.90,14.8
+L'Oréal,OR.PA,Luxe,France,30.5,1.65,19.5
+Schneider Electric,SU.PA,Industrie,France,24.2,1.40,15.8
+Air Liquide,AI.PA,Industrie,France,26.5,1.90,13.5
+Allianz,ALV.DE,Assurance,Allemagne,10.2,5.10,11.8
+Airbus,AIR.PA,Industrie,France,22.1,1.55,14.5
+Iberdrola,IBE.MC,Services publics,Espagne,13.5,4.30,10.2
+Inditex,ITX.MC,Consommation,Espagne,19.5,2.90,25.4
+BNP Paribas,BNP.PA,Finance,France,6.2,5.80,10.5
+UBS Group,UBSG.SW,Finance,Suisse,11.4,2.40,9.5
+Mercedes-Benz,MBG.DE,Automobile,Allemagne,5.8,6.20,16.5
+BMW,BMW.DE,Automobile,Allemagne,6.1,6.50,14.2
+Hermès,RMS.PA,Luxe,France,45.2,0.80,31.2
+Zurich Insurance,ZURN.SW,Assurance,Suisse,11.5,4.90,14.2
+Relx PLC,REL.L,Technologie,Royaume-Uni,29.4,1.80,45.2
+Equinor,EQNR.OL,Energie,Norvège,7.2,5.10,21.0
+National Grid,NG.L,Services publics,Royaume-Uni,14.5,5.20,9.2
+Compass Group,CPG.L,Services,Royaume-Uni,23.1,1.95,18.5
+Deutsche Telekom,DTE.DE,Télécoms,Allemagne,13.8,3.40,11.2
+UniCredit,UCG.MI,Finance,Italie,5.9,6.10,13.4
+Ferrari,RACE.MI,Automobile,Italie,48.2,0.60,38.5
+Adyen,ADYEN.AS,Technologie,Pays-Bas,42.5,0.00,22.1
+GSK PLC,GSK.L,Santé,Royaume-Uni,10.8,4.30,25.8
+Danone,BN.PA,Consommation,France,16.2,3.50,12.5
+Infineon,IFX.DE,Technologie,Allemagne,15.1,1.10,14.8
+Muenchener Rueck,MUV2.DE,Assurance,Allemagne,10.5,3.80,15.1
+Rio Tinto,RIO.L,Matières premières,Royaume-Uni,9.8,6.20,22.5
+ABB Ltd,ABBN.SW,Industrie,Suisse,21.4,2.10,19.2
+Holcim,HOLN.SW,Construction,Suisse,12.1,3.40,11.8
+Volvo Group,VOLVB.ST,Industrie,Suède,11.2,4.80,18.9
+Barclays,BARC.L,Finance,Royaume-Uni,6.4,4.20,9.1
+Engie,ENGI.PA,Services publics,France,9.5,6.80,12.2
+Intesa Sanpaolo,ISP.MI,Finance,Italie,7.2,7.50,13.8
+EssilorLuxottica,EL.PA,Santé,France,26.8,1.90,11.4
+Michelin,ML.PA,Automobile,France,10.2,3.90,13.5
+Deutsche Post,DHL.DE,Logistique,Allemagne,12.8,4.10,16.2
+Heineken,HEIA.AS,Consommation,Pays-Bas,18.5,2.10,14.4
+Swiss Re,SREN.SW,Assurance,Suisse,9.8,5.80,12.5
+Banco Santander,SAN.MC,Finance,Espagne,6.1,5.20,11.5
+BBVA,BBVA.MC,Finance,Espagne,6.4,5.80,14.8
+Amadeus IT Group,AMS.MC,Technologie,Espagne,22.5,1.80,35.2
+Telefonica,TEF.MC,Télécoms,Espagne,12.4,7.40,8.5
+Ferrovial,FER.MC,Construction,Espagne,28.1,1.50,9.2
+Repsol,REP.MC,Energie,Espagne,4.8,5.90,12.4
+CaixaBank,CABK.MC,Finance,Espagne,7.5,6
