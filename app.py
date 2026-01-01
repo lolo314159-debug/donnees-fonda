@@ -1,59 +1,79 @@
 import streamlit as st
 import pandas as pd
+import yfinance as yf
 
-# Configuration de base
-st.set_page_config(page_title="Stock Picker Européen", layout="wide")
+st.set_page_config(page_title="Stock Picker Dynamique", layout="wide")
 
-st.title("🇪🇺 Analyse Fondamentale : STOXX 600")
+st.title("🇪🇺 Analyseur STOXX 600 - Mise à jour Directe")
 
-# --- MÉMO SIMPLE ---
-with st.expander("ℹ️ MÉMO : Rappel des indicateurs"):
-    st.write("**PER** : Prix / Bénéfice (chercher < 15)")
-    st.write("**ROE %** : Rentabilité des fonds propres (chercher > 15%)")
-    st.write("**Yield %** : Rendement du dividende")
+# --- FONCTION DE MISE À JOUR ---
+def update_stock_data(dataframe):
+    progress_bar = st.progress(0)
+    status_text = st.empty()
+    updated_rows = []
+    
+    total = len(dataframe)
+    
+    for i, row in dataframe.iterrows():
+        ticker_symbol = row['Ticker']
+        status_text.text(f"Récupération de {row['Société']} ({ticker_symbol})...")
+        
+        try:
+            stock = yf.Ticker(ticker_symbol)
+            info = stock.info
+            
+            # Extraction des données en direct
+            new_per = info.get('trailingPE', row['PER'])
+            new_yield = info.get('dividendYield', 0) * 100 if info.get('dividendYield') else row['Yield %']
+            new_roe = info.get('returnOnEquity', 0) * 100 if info.get('returnOnEquity') else row['ROE %']
+            
+            updated_rows.append({
+                "Société": row['Société'],
+                "Ticker": ticker_symbol,
+                "Secteur": row['Secteur'],
+                "Pays": row['Pays'],
+                "PER": round(new_per, 2),
+                "Yield %": round(new_yield, 2),
+                "ROE %": round(new_roe, 2)
+            })
+        except:
+            updated_rows.append(row.to_dict())
+            
+        progress_bar.progress((i + 1) / total)
+    
+    status_text.text("Mise à jour terminée !")
+    return pd.DataFrame(updated_rows)
 
-# --- CHARGEMENT ---
+# --- CHARGEMENT INITIAL ---
 @st.cache_data
 def load_data():
-    try:
-        # Lecture brute sans fioritures
-        df = pd.read_csv("stoxx_data.csv")
-        return df
-    except:
-        # Retourne un tableau vide avec colonnes si le fichier est illisible
-        return pd.DataFrame(columns=["Société", "Ticker", "Secteur", "Pays", "PER", "Yield %", "ROE %"])
+    return pd.read_csv("stoxx_data.csv")
 
 df = load_data()
 
-if df.empty:
-    st.error("⚠️ Erreur : Le fichier 'stoxx_data.csv' est manquant ou vide sur GitHub.")
-else:
-    # --- FILTRES ---
-    st.sidebar.header("🔍 Recherche")
-    search = st.sidebar.text_input("Nom de la société", "")
-    
-    p_list = sorted(df["Pays"].unique())
-    s_list = sorted(df["Secteur"].unique())
-    
-    sel_p = st.sidebar.multiselect("Filtrer par Pays", p_list, default=p_list)
-    sel_s = st.sidebar.multiselect("Filtrer par Secteur", s_list, default=s_list)
-    
-    # Application des filtres
-    mask = (df["Pays"].isin(sel_p)) & (df["Secteur"].isin(sel_s))
-    if search:
-        mask = mask & (df["Société"].str.contains(search, case=False))
-    
-    df_filtered = df[mask].copy()
+# --- INTERFACE ---
+st.sidebar.header("⚙️ Gestion des données")
 
-    # --- AFFICHAGE SIMPLE ---
-    st.subheader(f"Résultats ({len(df_filtered)} sociétés)")
-    
-    # Affichage sans aucun style complexe (Heatmap supprimée)
-    st.dataframe(
-        df_filtered, 
-        use_container_width=True, 
-        hide_index=True
-    )
+if st.sidebar.button("🔄 Actualiser les données via Yahoo Finance"):
+    df = update_stock_data(df)
+    st.session_state['df'] = df
+    st.success("Les données ont été actualisées avec les cours du jour !")
 
-st.divider()
-st.caption("Application en mode haute compatibilité.")
+# Utilisation des données de session si elles existent
+if 'df' in st.session_state:
+    df = st.session_state['df']
+
+# Bouton de téléchargement du nouveau CSV
+csv = df.to_csv(index=False).encode('utf-8')
+st.sidebar.download_button(
+    label="📥 Télécharger le CSV mis à jour",
+    data=csv,
+    file_name='stoxx_data_updated.csv',
+    mime='text/csv',
+)
+
+# --- FILTRES ET AFFICHAGE ---
+# (Reprenez ici votre code de filtrage habituel)
+search = st.text_input("Rechercher une action", "")
+df_filtered = df[df['Société'].str.contains(search, case=False)] if search else df
+st.dataframe(df_filtered, use_container_width=True, hide_index=True)
