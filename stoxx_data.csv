@@ -1,29 +1,118 @@
 Société,Ticker,Secteur,Pays,PER,Yield %,ROE %
-ASML Holding,ASML.AS,Technologie,Pays-Bas,34.5,1.15,28.2
 LVMH,MC.PA,Luxe,France,22.8,1.75,24.5
-SAP SE,SAP.DE,Technologie,Allemagne,27.2,1.05,17.8
-Nestlé,NESN.SW,Consommation,Suisse,20.1,3.15,15.4
-Novo Nordisk,NOVO-B.CO,Santé,Danemark,31.2,1.10,32.0
-Shell,SHEL.L,Energie,Royaume-Uni,8.4,4.20,11.5
-AstraZeneca,AZN.L,Santé,Royaume-Uni,18.5,2.10,16.2
-Roche Holding,ROG.SW,Santé,Suisse,15.8,3.80,22.4
-TotalEnergies,TTE.PA,Energie,France,7.5,4.80,14.5
-Siemens,SIE.DE,Industrie,Allemagne,14.8,2.85,13.2
-Sanofi,SAN.PA,Santé,France,12.5,3.90,14.8
 L'Oréal,OR.PA,Luxe,France,30.5,1.65,19.5
+Hermès,RMS.PA,Luxe,France,45.2,0.80,31.2
+TotalEnergies,TTE.PA,Energie,France,7.5,4.80,14.5
+Sanofi,SAN.PA,Santé,France,12.5,3.90,14.8
+Airbus,AIR.PA,Industrie,France,22.1,1.55,14.5
 Schneider Electric,SU.PA,Industrie,France,24.2,1.40,15.8
 Air Liquide,AI.PA,Industrie,France,26.5,1.90,13.5
-Allianz,ALV.DE,Assurance,Allemagne,10.2,5.10,11.8
-Airbus,AIR.PA,Industrie,France,22.1,1.55,14.5
-Iberdrola,IBE.MC,Services publics,Espagne,13.5,4.30,10.2
-Inditex,ITX.MC,Consommation,Espagne,19.5,2.90,25.4
 BNP Paribas,BNP.PA,Finance,France,6.2,5.80,10.5
-Mercedes-Benz,MBG.DE,Automobile,Allemagne,5.8,6.20,16.5
-BMW,BMW.DE,Automobile,Allemagne,6.1,6.50,14.2
-Hermès,RMS.PA,Luxe,France,45.2,0.80,31.2
-Banco Santander,SAN.MC,Finance,Espagne,6.1,5.20,11.5
-BBVA,BBVA.MC,Finance,Espagne,6.4,5.80,14.8
-Amadeus IT Group,AMS.MC,Technologie,Espagne,22.5,1.80,35.2
-Volkswagen,VOW3.DE,Automobile,Allemagne,4.2,7.50,12.1
+Safran,SAF.PA,Industrie,France,24.8,1.20,16.5
+Vinci,DG.PA,BTP,France,13.5,3.90,15.2
+AXA,CS.PA,Assurance,France,9.8,5.40,12.8
+EssilorLuxottica,EL.PA,Santé,France,26.8,1.90,11.4
+Kering,KER.PA,Luxe,France,14.2,4.50,18.4
+Dassault Systèmes,DSY.PA,Technologie,France,31.2,0.60,18.1
+Pernod Ricard,RI.PA,Consommation,France,18.2,2.80,14.5
+Saint-Gobain,SGO.PA,Matériaux,France,11.1,2.80,13.5
+Danone,BN.PA,Consommation,France,16.2,3.50,12.5
 Orange,ORA.PA,Télécoms,France,10.2,6.50,9.1
 Stellantis,STLAP.PA,Automobile,France,4.1,8.20,22.5
+Michelin,ML.PA,Automobile,France,10.2,3.90,13.5
+Thales,HO.PA,Industrie,France,18.5,1.80,14.2
+Capgemini,CAP.PA,Technologie,France,15.4,1.60,17.5
+Legrand,LR.PA,Industrie,France,19.8,1.90,15.1
+Publicis,PUB.PA,Media,France,14.5,2.40,19.2
+Veolia,VIE.PA,Services publics,France,15.4,3.20,10.5
+Crédit Agricole,ACA.PA,Finance,France,6.5,6.20,9.5
+Société Générale,GLE.PA,Finance,France,5.5,6.90,8.1
+Engie,ENGI.PA,Services publics,France,9.5,6.80,12.2
+Bouygues,EN.PA,BTP,France,10.1,4.90,9.8
+Edenred,EDEN.PA,Services,France,25.4,1.40,28.2
+Carrefour,CA.PA,Distribution,France,9.1,3.80,12.4
+Unibail-Rodamco,URW.AS,Immobilier,France,12.5,4.50,4.2
+Vivendi,VIV.PA,Media,France,11.4,2.50,8.5
+Teleperformance,TEP.PA,Services,France,8.5,3.20,21.5
+Eurofins Scientific,ERF.PA,Santé,France,19.2,1.10,12.8
+Renault,RNO.PA,Automobile,France,4.8,4.50,11.2
+Alstom,ALO.PA,Industrie,France,14.2,0.00,6.5
+Worldline,WLN.PA,Technologie,France,9.8,0.00,5.2
+Accor,AC.PA,Services,France,16.5,2.10,10.8
+Eramet,ERA.PA,Matières premières,France,6.8,3.20,15.4
+Dassault Aviation,AM.PA,Industrie,France,14.5,1.50,12.1
+Gecina,GFC.PA,Immobilier,France,18.2,5.10,4.8
+Klepierre,LI.PA,Immobilier,France,11.5,6.40,5.2
+Sodexo,SW.PA,Services,France,15.8,2.80,16.5
+Rexel,RXL.PA,Industrie,France,9.4,3.50,14.2
+Arkema,AKE.PA,Chimie,France,10.8,3.40,11.5
+BioMérieux,BIM.PA,Santé,France,28.2,0.80,14.1
+Bolloré,BOL.PA,Industrie,France,12.4,1.50,9.2
+Bureau Veritas,BVI.PA,Services,France,18.5,2.40,19.8
+Eiffage,FGR.PA,BTP,France,10.2,3.80,14.5
+Forvia,FRVIA.PA,Automobile,France,6.2,2.50,13.2
+Ipsen,IPN.PA,Santé,France,14.1,1.20,18.5
+Lisi,FII.PA,Industrie,France,13.5,1.40,8.5
+Nexans,NEX.PA,Industrie,France,11.8,2.10,15.2
+Remy Cointreau,RCO.PA,Consommation,France,24.5,1.80,13.8
+Rubis,RUI.PA,Energie,France,8.5,7.20,11.4
+Seb,SK.PA,Consommation,France,12.8,2.40,14.2
+Sopra Steria,SOP.PA,Technologie,France,13.2,1.80,15.5
+SPIE,SPIE.PA,Industrie,France,15.4,1.90,13.8
+TF1,TFI.PA,Media,France,7.5,6.10,12.4
+Valeo,FR.PA,Automobile,France,5.8,4.20,9.8
+Verallia,VRLA.PA,Industrie,France,8.2,3.90,22.1
+Virbac,VIRP.PA,Santé,France,17.5,0.00,16.2
+Wendt,WNT.PA,Finance,France,11.2,3.40,8.5
+Covivio,COV.PA,Immobilier,France,14.5,5.80,4.1
+Icade,ICAD.PA,Immobilier,France,10.8,7.50,3.8
+Altareit,AREIT.PA,Immobilier,France,9.5,0.00,12.1
+Aramis,ARAMI.PA,Services,France,15.2,0.00,5.4
+Aubay,AUB.PA,Technologie,France,14.1,2.50,18.2
+Beneteau,BEN.PA,Industrie,France,7.8,4.20,15.5
+Clariane,CLARI.PA,Santé,France,6.4,0.00,4.2
+Eutelsat,ETL.PA,Télécoms,France,6.2,0.00,5.8
+Fnac Darty,FNAC.PA,Distribution,France,8.5,
+SAP SE,SAP.DE,Technologie,Allemagne,27.2,1.05,17.8
+Siemens,SIE.DE,Industrie,Allemagne,14.8,2.85,13.2
+Allianz,ALV.DE,Assurance,Allemagne,10.2,5.10,11.8
+Deutsche Telekom,DTE.DE,Télécoms,Allemagne,13.8,3.40,11.2
+Mercedes-Benz,MBG.DE,Automobile,Allemagne,5.8,6.20,16.5
+BMW,BMW.DE,Automobile,Allemagne,6.1,6.50,14.2
+Volkswagen,VOW3.DE,Automobile,Allemagne,4.2,7.50,12.1
+Muenchener Rueck,MUV2.DE,Assurance,Allemagne,10.5,3.80,15.1
+Infineon,IFX.DE,Technologie,Allemagne,15.1,1.10,14.8
+DHL Group,DHL.DE,Logistique,Allemagne,12.8,4.10,16.2
+BASF,BAS.DE,Chimie,Allemagne,13.4,6.40,9.5
+Bayer,BAYN.DE,Santé,Allemagne,7.1,0.50,8.2
+Adidas,ADS.DE,Consommation,Allemagne,32.5,0.40,14.2
+Deutsche Börse,DB1.DE,Finance,Allemagne,18.2,2.10,19.5
+Deutsche Bank,DBK.DE,Finance,Allemagne,6.5,3.20,7.5
+E.ON,EOAN.DE,Services publics,Allemagne,11.8,4.50,9.8
+RWE,RWE.DE,Services publics,Allemagne,10.5,2.40,11.2
+Vonovia,VNA.DE,Immobilier,Allemagne,15.2,4.10,5.5
+Henkel,HEN3.DE,Consommation,Allemagne,14.5,2.80,10.8
+Continental,CON.DE,Automobile,Allemagne,9.4,3.80,10.1
+Beiersdorf,BEI.DE,Consommation,Allemagne,24.1,0.80,12.8
+Hannover Rueck,HNR1.DE,Assurance,Allemagne,11.2,3.20,14.5
+Commerzbank,CBK.DE,Finance,Allemagne,7.2,3.50,8.2
+Heidelberg Materials,HEI.DE,Construction,Allemagne,9.8,3.10,10.5
+MTU Aero Engines,MTX.DE,Industrie,Allemagne,19.2,1.10,15.4
+Qiagen,QIA.DE,Santé,Allemagne,21.5,0.00,12.2
+Rheinmetall,RHM.DE,Industrie,Allemagne,18.8,1.80,16.5
+Symrise,SY1.DE,Chimie,Allemagne,28.4,1.20,11.4
+Zalando,ZAL.DE,Consommation,Allemagne,35.2,0.00,6.5
+Porsche AG,P911.DE,Automobile,Allemagne,14.2,2.50,18.5
+Brenntag,BNR.DE,Chimie,Allemagne,12.5,2.40,14.2
+Sartorius,SRT3.DE,Santé,Allemagne,38.5,0.50,15.1
+Merck KGaA,MRK.DE,Santé,Allemagne,16.5,1.50,11.8
+Fresenius,FRE.DE,Santé,Allemagne,9.2,3.10,9.5
+Covestro,1COV.DE,Chimie,Allemagne,13.8,0.00,8.2
+Delivery Hero,DHER.DE,Services,Allemagne,15.2,0.00,-4.5
+HelloFresh,HFG.DE,Consommation,Allemagne,12.4,0.00,10.5
+Puma,PUM.DE,Consommation,Allemagne,16.2,1.80,13.2
+Lufthansa,LHA.DE,Transports,Allemagne,6.5,0.00,12.1
+Bechtle,BC8.DE,Technologie,Allemagne,15.8,1.20,14.8
+Nemetschek,NEM.DE,Technologie,Allemagne,42.1,0.50,22.1
+Evonik,EVK.DE,Chimie,Allemagne,11.5,5.20,8.5
+K+S,SDF.DE,Matières premières,Allemagne,7
