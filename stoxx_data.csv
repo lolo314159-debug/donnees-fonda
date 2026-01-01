@@ -72,7 +72,6 @@ Aubay,AUB.PA,Technologie,France,14.1,2.50,18.2
 Beneteau,BEN.PA,Industrie,France,7.8,4.20,15.5
 Clariane,CLARI.PA,Santé,France,6.4,0.00,4.2
 Eutelsat,ETL.PA,Télécoms,France,6.2,0.00,5.8
-Fnac Darty,FNAC.PA,Distribution,France,8.5,
 SAP SE,SAP.DE,Technologie,Allemagne,27.2,1.05,17.8
 Siemens,SIE.DE,Industrie,Allemagne,14.8,2.85,13.2
 Allianz,ALV.DE,Assurance,Allemagne,10.2,5.10,11.8
@@ -116,3 +115,123 @@ Bechtle,BC8.DE,Technologie,Allemagne,15.8,1.20,14.8
 Nemetschek,NEM.DE,Technologie,Allemagne,42.1,0.50,22.1
 Evonik,EVK.DE,Chimie,Allemagne,11.5,5.20,8.5
 K+S,SDF.DE,Matières premières,Allemagne,7
+Inditex,ITX.MC,Consommation,Espagne,19.5,2.90,25.4
+Iberdrola,IBE.MC,Services publics,Espagne,13.5,4.30,10.2
+Banco Santander,SAN.MC,Finance,Espagne,6.1,5.20,11.5
+BBVA,BBVA.MC,Finance,Espagne,6.4,5.80,14.8
+Amadeus,AMS.MC,Technologie,Espagne,22.5,1.80,35.2
+Cellnex Telecom,CLNX.MC,Télécoms,Espagne,25.4,0.00,4.2
+Telefónica,TEF.MC,Télécoms,Espagne,12.4,7.40,8.5
+Repsol,REP.MC,Energie,Espagne,4.8,5.90,12.4
+Ferrovial,FER.MC,Construction,Espagne,28.1,1.50,9.2
+Aena,AENA.MC,Transports,Espagne,15.8,3.50,18.1
+CaixaBank,CABK.MC,Finance,Espagne,7.5,6.20,13.1
+Naturgy,NTGY.MC,Services publics,Espagne,11.2,5.80,12.5
+Endesa,ELE.MC,Services publics,Espagne,10.5,6.10,14.2
+Grifols,GRF.MC,Santé,Espagne,14.2,0.00,7.8
+ACS,ACS.MC,Construction,Espagne,10.8,5.40,11.5
+Acciona,ANA.MC,Services publics,Espagne,13.4,3.20,9.8
+Acciona Energía,ANE.MC,Energie,Espagne,16.5,2.80,8.5
+Redeia,RED.MC,Services publics,Espagne,12.8,5.90,10.2
+Enagás,ENG.MC,Services publics,Espagne,11.5,8.20,9.1
+Banco Sabadell,SAB.MC,Finance,Espagne,5.8,6.50,10.5
+Bankinter,BKT.MC,Finance,Espagne,7.2,5.10,14.2
+Mapfre,MAP.MC,Assurance,Espagne,8.5,6.80,9.8
+IAG,IAG.MC,Transports,Espagne,5.2,0.00,18.5
+Meliá Hotels,MEL.MC,Services,Espagne,14.1,0.00,8.4
+Indra,IDR.MC,Technologie,Espagne,11.8,2.10,14.5
+Fluidra,FDR.MC,Industrie,Espagne,18.2,2.50,16.2
+Merlin Properties,MRL.MC,Immobilier,Espagne,15.4,4.80,4.1
+Colonial,COL.MC,Immobilier,Espagne,16.2,4.50,3.8
+Logista,LOG.MC,Logistique,Espagne,12.5,6.20,28.5
+Acerinox,ACX.MC,Matières premières,Espagne,8.2,5.10,11.4
+ArcelorMittal,MTS.MC,Matières premières,Espagne,6.5,1.80,9.2
+Sacyr,SCYR.MC,Construction,Espagne,9.8,3.80,10.1
+Unicaja,UNI.MC,Finance,Espagne,6.2,5.40,7.5
+Solaria,SLR.MC,Energie,Espagne,18.5,0.00,14.2
+Laboratorios Rovi,ROVI.MC,Santé,Espagne,16.8,2.10,18.4
+Vidrala,VID.MC,Industrie,Espagne,11.4,2.50,19.2
+Viscofan,VIS.MC,Consommation,Espagne,15.2,3.40,16.5
+Applus+,APPS.MC,Services,Espagne,14.5,2.40,12.8
+Gestamp,GEST.MC,Automobile,Espagne,8.4,3.50,13.2
+CIE Automotive,CIE.MC,Automobile,Espagne,10.1,2.80,17.5
+Almirall,ALM.MC,Santé,Espagne,19.2,2.10,6.5
+Construcciones y Auxiliar de Ferrocarriles,CAF.MC,Industrie,Espagne,12.4,2.50,9.8
+Ebro Foods,EBRO.MC,Consommation,Espagne,13.8,3.50,10.5
+PharmaMar,PHM.MC,Santé,Espagne,24.1,1.50,15.2
+Neinor Homes,HOME.MC,Immobilier,Espagne,9.5,8.10,11.2
+Aedas Homes,AEDAS.MC,Immobilier,Espagne,8.8,7.50,12.1
+Metrovacesa,MVC.MC,Immobilier,Espagne,11.2,9.20,4.5
+Larrau,LAR.MC,Immobilier,Espagne,13.5,6.80,5.2
+Atresmedia,A3M.MC,Media,Espagne,7.8,7.40,18.5
+Mediaset España,TL5.MC,Media,Espagne,6.5,0.00,12.4
+Prosegur,PSG.MC,Services,Espagne,10.2,5.80,14.1
+Prosegur Cash,CASH.MC,Services,Espagne,8.5,7.20,20.5
+Ence,ENC.MC,Matières premières,Espagne,14.2,6.40,8.2
+Técnicas Reunidas,TRE.MC,Industrie,Espagne,12.5,0.00,11.4
+Obrascon Huarte Lain,OHLA.MC,Construction,Espagne,15.8,0.00,3.2
+Talgo,TLGO.MC,Industrie,Espagne,11.4,1.80,8.5
+Tubacex,TUB.MC,Industrie,Espagne,7.5,3.40,12.1
+Global Dominion,DOM.MC,Technologie,Espagne,9.2,2.80,13.8
+Amper,AMP.MC,Technologie,Espagne,16.5,0.00,4.8
+Zardoya Otis,ZOT.MC,Industrie,Espagne,18.4,4.20,25.1
+Parques Reunidos,PQR.MC,Services,Espagne,14.8,3.10,9.2
+NH Hotel Group,NHH.MC,Services,Espagne,12.1,0.00,10.5
+Faes Farma,FAE.MC,Santé,Espagne,11.2,4.50,16.2
+Miquel y Costas,MCM.MC,Industrie,Espagne,10.8,3.20,12.4
+Línea Directa,LDA.MC,Assurance,Espagne,15.5,4.80,14.2
+Gestamp Biomass,GIB.MC,Energie,Espagne,13.2,0.00,7.5
+Greenalia,GRN.MC,Energie,Espagne,20.1,0.00,9.8
+Audax Renovables,ADX.MC,Energie,Espagne,14.5,0.00,8.5
+Solarpack,SPK.MC,Energie,Energie,17.2,0.00,10.2
+Grenergy,GRE.MC,Energie,Espagne,21.4,0.00,11.5
+Ecoener,ENER.MC,Energie,Espagne,19.5,0.00,8.2
+Opdenergy,OPDE.MC,Energie,Espagne,16.8,0.00,7.4
+Arteche,ART.MC,Industrie,Espagne,13.4,2.10,12.5
+Elecnor,ENO.MC,Industrie,Espagne,8.5,3.40,14.8
+Inmobiliaria del Sur,ISUR.MC,Immobilier,Espagne,10.2,4.20,6.2
+Realia Business,RLIA.MC,Immobilier,Espagne,14.1,2.50,4.8
+Alantra,ALNT.MC,Finance,Espagne,11.8,6.50,15.2
+Renta 4,R4.MC,Finance,Espagne,12.4,5.80,16.5
+GVC Gaesco,GVC.MC,Finance,Espagne,10.5,4.20,9.8
+Azkoyen,AZK.MC,Industrie,Espagne,11.2,5.10,14.2
+Enel,ENEL.MI,Services publics,Italie,10.2,6.50,14.8
+UniCredit,UCG.MI,Finance,Italie,5.9,6.10,13.4
+Intesa Sanpaolo,ISP.MI,Finance,Italie,7.2,7.50,13.8
+Ferrari,RACE.MI,Automobile,Italie,48.2,0.60,38.5
+Eni,ENI.MI,Energie,Italie,6.8,5.90,11.2
+STMicroelectronics,STMMI.MI,Technologie,Italie,12.5,0.60,22.1
+Assicurazioni Generali,G.MI,Assurance,Italie,9.5,5.80,11.5
+Moncler,MONC.MI,Luxe,Italie,24.8,1.80,28.2
+Prysmian,PRY.MI,Industrie,Italie,16.2,1.50,15.4
+Terna,TRN.MI,Services publics,Italie,14.5,4.80,10.2
+Snam,SRG.MI,Services publics,Italie,13.8,5.20,9.5
+Poste Italiane,PST.MI,Finance,Italie,8.5,6.40,12.8
+Leonardo,LDO.MI,Industrie,Italie,11.4,1.20,10.5
+Mediobanca,MB.MI,Finance,Italie,9.2,5.50,12.1
+FinecoBank,FBK.MI,Finance,Italie,14.2,3.80,25.4
+Banca Mediolanum,BMED.MI,Finance,Italie,10.8,6.20,18.2
+Campari,CPR.MI,Consommation,Italie,22.1,0.80,11.4
+Tenaris,TEN.MI,Industrie,Italie,7.5,3.20,14.5
+Italgas,IG.MI,Services publics,Italie,12.4,5.80,11.2
+A2A,A2A.MI,Services publics,Italie,11.5,5.10,9.8
+Telecom Italia,TIT.MI,Télécoms,Italie,15.2,0.00,2.5
+Recordati,REC.MI,Santé,Italie,18.5,2.40,21.2
+Diasorin,DIA.MI,Santé,Italie,26.5,1.10,14.5
+Nexi,NEXI.MI,Technologie,Italie,12.8,0.00,8.2
+Inwit,INW.MI,Télécoms,Italie,22.4,3.50,7.5
+Amplifon,AMP.MI,Santé,Italie,28.1,0.90,16.2
+Interpump Group,IP.MI,Industrie,Italie,19.2,0.80,17.5
+Buzzi Unicem,BZU.MI,Construction,Italie,8.2,1.50,11.4
+Saipem,SPM.MI,Energie,Italie,14.5,0.00,5.2
+Maire Tecnimont,MAIRE.MI,Industrie,Italie,10.5,3.40,18.2
+Pirelli,PIRC.MI,Automobile,Italie,9.8,4.20,12.5
+Brembo,BRE.MI,Automobile,Italie,11.2,2.50,14.8
+Brunello Cucinelli,BC.MI,Luxe,Italie,42.5,0.60,20.1
+Tod's,TOD.MI,Luxe,Italie,25.4,0.00,5.2
+Salvatore Ferragamo,SFER.MI,Luxe,Italie,21.2,1.80,8.5
+Safilo Group,SFL.MI,Luxe,Italie,16.5,0.00,4.2
+Banca Popolare di Sondrio,BPSO.MI,Finance,Italie,6.8,5.10,9.8
+BPER Banca,BPE.MI,Finance,Italie,5.4,6.80,10.2
+Banco BPM,BAMI.MI,Finance,Italie,6.2,7.20,11.4
+MPS,BMPS.MI,Finance,Italie,4.5,0.00,12.5
