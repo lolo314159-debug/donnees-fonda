@@ -2,60 +2,67 @@ import streamlit as st
 import pandas as pd
 import yfinance as yf
 
-st.set_page_config(page_title="Stoxx 600 Analyzer", layout="wide")
-
-@st.cache_data(ttl=3600)
-def fetch_data():
-    # Liste de test réduite pour assurer le fonctionnement
-    tickers = ["ASML.AS", "MC.PA", "SAP.DE", "NESN.SW", "SHEL.L", "AIR.PA", "SIE.DE"]
-    
-    results = []
-    progress_bar = st.progress(0)
-    
-    for i, t in enumerate(tickers):
-        try:
-            stock = yf.Ticker(t)
-            inf = stock.info
-            # On vérifie que les données essentielles existent avant d'ajouter
-            if 'longName' in inf:
-                results.append({
-                    "Société": inf.get("longName"),
-                    "Ticker": t,
-                    "Secteur": inf.get("sector", "Inconnu"),
-                    "PER": inf.get("trailingPE"),
-                    "Yield %": (inf.get("dividendYield", 0) or 0) * 100,
-                    "ROE %": (inf.get("returnOnEquity", 0) or 0) * 100
-                })
-        except Exception:
-            continue
-        progress_bar.progress((i + 1) / len(tickers))
-    
-    # Création du DataFrame avec des colonnes par défaut si vide
-    if not results:
-        return pd.DataFrame(columns=["Société", "Ticker", "Secteur", "PER", "Yield %", "ROE %"])
-    
-    return pd.DataFrame(results)
+st.set_page_config(page_title="Stoxx 600 Picker", layout="wide")
 
 st.title("🇪🇺 STOXX 600 Dashboard")
 
-with st.spinner('Chargement des données...'):
-    df = fetch_data()
-
-if df.empty:
-    st.error("⚠️ Impossible de récupérer les données de Yahoo Finance pour le moment. Réessayez dans quelques minutes.")
-else:
-    # FILTRES SÉCURISÉS
-    st.sidebar.header("Paramètres")
+@st.cache_data(ttl=3600)
+def fetch_financial_data():
+    # Liste de tickers ultra-connus pour tester la connexion
+    tickers = ["ASML.AS", "MC.PA", "SAP.DE", "NESN.SW", "SHEL.L", "AIR.PA", "SIE.DE", "OR.PA"]
     
-    # On s'assure que la colonne existe avant de créer le filtre
-    secteurs_dispo = df["Secteur"].unique().tolist()
-    selected_sector = st.sidebar.multiselect("Secteurs", secteurs_dispo, default=secteurs_dispo)
+    results = []
+    
+    # Utilisation d'un conteneur pour afficher l'avancement
+    status_text = st.empty()
+    
+    for t in tickers:
+        try:
+            status_text.text(f"Récupération de : {t}...")
+            stock = yf.Ticker(t)
+            # On demande uniquement les données spécifiques pour éviter le blocage
+            fast_info = stock.fast_info 
+            info = stock.info
+            
+            results.append({
+                "Société": info.get("longName", t),
+                "Ticker": t,
+                "Secteur": info.get("sector", "Non classé"),
+                "Prix": fast_info.get("last_price"),
+                "PER": info.get("trailingPE"),
+                "ROE %": (info.get("returnOnEquity", 0) or 0) * 100,
+                "Yield %": (info.get("dividendYield", 0) or 0) * 100
+            })
+        except Exception as e:
+            continue
+            
+    status_text.empty()
+    return pd.DataFrame(results)
 
-    # Filtrage
-    filtered_df = df[df["Secteur"].isin(selected_sector)]
+# --- EXECUTION ---
+data = fetch_financial_data()
 
-    # Affichage
+if data.empty:
+    st.error("⚠️ Yahoo Finance ne répond pas. Cela arrive parfois avec les serveurs partagés. Cliquez sur 'Rerun' en haut à droite dans quelques instants.")
+    if st.button("Réessayer maintenant"):
+        st.cache_data.clear()
+        st.rerun()
+else:
+    # Sidebar
+    st.sidebar.header("Filtres")
+    secteurs = sorted(data["Secteur"].unique())
+    selected = st.sidebar.multiselect("Choisir Secteurs", secteurs, default=secteurs)
+    
+    # Filtrage et Affichage
+    df_filtered = data[data["Secteur"].isin(selected)]
+    
+    st.subheader(f"Analyse de {len(df_filtered)} sociétés")
     st.dataframe(
-        filtered_df.style.format({"PER": "{:.2f}", "Yield %": "{:.2f}%", "ROE %": "{:.2f}%"}),
+        df_filtered.style.format({
+            "Prix": "{:.2f} €",
+            "PER": "{:.2f}",
+            "ROE %": "{:.2f}%",
+            "Yield %": "{:.2f}%"
+        }),
         use_container_width=True
     )
