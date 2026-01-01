@@ -1,43 +1,50 @@
 import streamlit as st
 import pandas as pd
 
-# Configuration de la page
-st.set_page_config(page_title="Stock Picker Européen", layout="wide")
+# 1. Configuration de la page
+st.set_page_config(page_title="Stock Picker STOXX 600", layout="wide")
 
 st.title("🇪🇺 Analyse Fondamentale : STOXX 600")
 
 # --- MÉMO ANALYSE ---
-with st.expander("ℹ️ MÉMO : Signification des couleurs et colonnes"):
+with st.expander("ℹ️ MÉMO : Signification des indicateurs"):
     st.markdown("""
-    * **PER** (Vert = Moins cher) : Rapport cours/bénéfice. 
-    * **ROE %** (Vert = Plus rentable) : Rendement des capitaux propres.
-    * **Yield %** (Bleu = Gros dividende) : Rendement du dividende.
+    * **PER** (Vert = Moins cher) : Rapport cours/bénéfice.
+    * **ROE %** (Vert = Plus rentable) : Capacité à générer du profit avec l'argent des actionnaires.
+    * **Yield %** (Bleu = Dividende élevé) : Rendement annuel versé.
     """)
 
-# --- CHARGEMENT SÉCURISÉ DES DONNÉES ---
+# --- CHARGEMENT DES DONNÉES ---
 @st.cache_data
 def load_data():
     try:
-        # Tente de lire le fichier CSV sur ton GitHub
+        # Lecture du fichier CSV sur GitHub
         df = pd.read_csv("stoxx_data.csv")
+        # Nettoyage minimal pour éviter les erreurs de texte
+        df.columns = df.columns.str.strip()
         return df
-    except Exception as e:
-        # Renvoie un tableau vide avec les colonnes pour éviter le KeyError
-        return pd.DataFrame(columns=["Société", "Ticker", "Secteur", "Pays", "PER", "Yield %", "ROE %"])
+    except:
+        return pd.DataFrame()
 
 df = load_data()
 
-# Vérification si le fichier est vide ou manquant
+# Vérification de la présence des données pour éviter les KeyError
 if df.empty:
-    st.warning("⚠️ Le fichier 'stoxx_data.csv' est vide ou introuvable sur GitHub. Vérifie tes fichiers.")
+    st.error("⚠️ Le fichier 'stoxx_data.csv' est manquant ou mal formaté sur GitHub.")
+    st.info("Créez un fichier stoxx_data.csv avec les colonnes : Société, Ticker, Secteur, Pays, PER, Yield %, ROE %")
 else:
-    # --- BARRE LATÉRALE (FILTRES) ---
-    st.sidebar.header("🔍 Recherche & Filtres")
-    search = st.sidebar.text_input("Nom de la société", "")
+    # --- BARRE LATÉRALE ---
+    st.sidebar.header("🔍 Filtres")
     
-    # Filtres sécurisés (ne s'affichent que si les colonnes existent)
-    selected_pays = st.sidebar.multiselect("Pays", sorted(df["Pays"].unique()), default=df["Pays"].unique())
-    selected_secteurs = st.sidebar.multiselect("Secteurs", sorted(df["Secteur"].unique()), default=df["Secteur"].unique())
+    # Filtre de recherche
+    search = st.sidebar.text_input("Rechercher une société", "")
+    
+    # Filtres par Pays et Secteur (Sécurisés)
+    list_pays = sorted(df["Pays"].dropna().unique())
+    selected_pays = st.sidebar.multiselect("Pays", list_pays, default=list_pays)
+    
+    list_secteurs = sorted(df["Secteur"].dropna().unique())
+    selected_secteurs = st.sidebar.multiselect("Secteurs", list_secteurs, default=list_secteurs)
     
     # Application des filtres
     mask = (df["Pays"].isin(selected_pays)) & (df["Secteur"].isin(selected_secteurs))
@@ -46,21 +53,19 @@ else:
     
     df_filtered = df[mask].copy()
 
-    # --- STYLE AVEC GRADIENTS ---
-    # On vérifie qu'on a des données avant d'appliquer le style
+    # --- AFFICHAGE ET COULEURS ---
     if not df_filtered.empty:
+        # Application des dégradés de couleurs
         styled_df = df_filtered.style.format({
             "PER": "{:.2f}",
             "Yield %": "{:.2f}%",
             "ROE %": "{:.2f}%"
-        }).background_gradient(cmap='RdYlGn_r', subset=['PER']      # Vert = Petit PER
-        ).background_gradient(cmap='RdYlGn', subset=['ROE %']       # Vert = Gros ROE
-        ).background_gradient(cmap='Blues', subset=['Yield %'])     # Bleu = Gros Dividende
+        }).background_gradient(cmap='RdYlGn_r', subset=['PER']
+        ).background_gradient(cmap='RdYlGn', subset=['ROE %']
+        ).background_gradient(cmap='Blues', subset=['Yield %'])
 
-        st.subheader(f"Résultats ({len(df_filtered)} sociétés)")
         st.dataframe(styled_df, use_container_width=True, hide_index=True)
     else:
-        st.info("Aucun résultat ne correspond à vos filtres.")
+        st.warning("Aucun résultat pour ces filtres.")
 
-st.divider()
-st.caption("Données basées sur le fichier stoxx_data.csv mis à jour.")
+st.caption("Données de démonstration STOXX 600 - Mise à jour 2026")
